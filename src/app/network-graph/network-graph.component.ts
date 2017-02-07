@@ -72,6 +72,15 @@ export class VisNetworkExampleComponent implements OnInit, OnDestroy {
         };
         
         this.visNetworkOptions = {
+            interaction: {
+               navigationButtons: true,
+               keyboard: true
+            },
+            layout: {
+                hierarchical: {
+                    direction: 'Left-Right'
+                }
+            },
             nodes:{
                 borderWidth: 4,
                 size: 30,
