@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { VisNetworkService } from 'ng2-vis';
 import { VisModule } from 'ng2-vis';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '@angular/material';
+import { MenubarModule } from 'primeng/primeng';
+import { ButtonModule, PanelModule } from 'primeng/primeng';
+import {Router,RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VisNetworkExampleComponent
+    VisNetworkExampleComponent    
   ],
   imports: [
     BrowserModule,
@@ -20,10 +22,13 @@ import { MaterialModule } from '@angular/material';
     HttpModule,
     VisModule,
     CommonModule,
-    MaterialModule.forRoot()
+    MenubarModule,
+    ButtonModule,
+    PanelModule,
+    RouterModule.forRoot([])    
   ],
   providers: [
-    VisNetworkService
+    VisNetworkService    
   ],
   bootstrap: [AppComponent]
 })

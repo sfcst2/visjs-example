@@ -8,6 +8,7 @@ import {
     VisNetworkData,
     VisEdgeOptions,
     VisNetworkOptions } from 'ng2-vis';
+import { MenubarModule,MenuItem,Menu} from 'primeng/primeng';
 
 class ExampleNetworkData implements VisNetworkData {
     public nodes: VisNodes;
@@ -23,13 +24,15 @@ class ExampleEdgeOptions implements VisEdgeOptions{
     template: require('./network-graph.component.html'),
     styles: [
         require('./network-graph.component.css')
-    ]
+    ]    
 })
 export class VisNetworkExampleComponent implements OnInit, OnDestroy {
 
     public visNetwork: string = 'networkId1';
     public visNetworkData: ExampleNetworkData;
     public visNetworkOptions: VisNetworkOptions;
+    
+    private items: MenuItem[];    
 
     public constructor(private visNetworkService: VisNetworkService) { }
 
@@ -53,6 +56,12 @@ export class VisNetworkExampleComponent implements OnInit, OnDestroy {
     }
 
     public ngOnInit(): void {
+
+        this.items = [{
+            label: 'Options',
+            icon: 'fa-bars',            
+        }];
+
         let nodes = new VisNodes([
             { id: '1', label: 'Node 1' },
             { id: '2', label: 'Node 2' },
@@ -78,7 +87,7 @@ export class VisNetworkExampleComponent implements OnInit, OnDestroy {
             },
             layout: {
                 hierarchical: {
-                    direction: 'Left-Right'
+                    direction: 'LR'
                 }
             },
             nodes:{

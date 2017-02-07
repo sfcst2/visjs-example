@@ -3,3 +3,15 @@
     height: 400px;
     border: 1px solid lightgray;
 }
+
+.menu-button{
+    float:right;
+}
+
+.search-banner{
+    width: 100%;
+}
+
+p-header input[type='text']{
+    width: 400px;
+}
