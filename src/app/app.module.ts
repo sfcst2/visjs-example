@@ -11,6 +11,9 @@ import { MenubarModule } from 'primeng/primeng';
 import { ButtonModule, PanelModule } from 'primeng/primeng';
 import {Router,RouterModule} from '@angular/router';
 
+import {GraphService} from './network-graph/graph.service';
+import {GraphServiceConfiguration} from './network-graph/graph.service.configuration';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,9 @@ import {Router,RouterModule} from '@angular/router';
     RouterModule.forRoot([])    
   ],
   providers: [
-    VisNetworkService    
+    VisNetworkService,
+    GraphService,
+    GraphServiceConfiguration    
   ],
   bootstrap: [AppComponent]
 })
