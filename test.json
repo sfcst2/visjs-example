@@ -1,0 +1,33 @@
+{
+    "graphservice":
+        {
+            "nodes":[
+                {
+                    "label": "America",
+                    "details": "America the beautiful.",
+                    "id": 1
+                },
+                {
+                    "label": "Italy",
+                    "details": "Italy looks like a boot.",
+                    "id": 2
+                },
+                {
+                    "label": "France",
+                    "details": "The French are cowards.",
+                    "id": 3
+                }
+            ],
+            "links":[
+                {
+                    "to": "1",
+                    "from": "2"                    
+                },
+                {
+                    "to": "1",
+                    "from": "3"                    
+                }                
+            ]
+        }
+   
+}
