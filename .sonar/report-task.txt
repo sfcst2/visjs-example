@@ -1,0 +1,5 @@
+projectKey=sfc:my-vis-app
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/sfc:my-vis-app
+ceTaskId=AVvs2DVL8GWwlFqB4Ask
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVvs2DVL8GWwlFqB4Ask

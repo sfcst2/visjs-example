@@ -11,8 +11,7 @@
     "e2e": "protractor"
   },
   "private": true,
-  "dependencies": {
-    "ng2-vis":"0.0.5",
+  "dependencies": {    
     "@angular/common": "^2.1.0",
     "@angular/compiler": "^2.1.0",
     "@angular/core": "^2.1.0",
@@ -26,12 +25,14 @@
     "primeng": "2.0.0",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
+    "vis": "4.20.0",
     "zone.js": "^0.6.23"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^2.1.0",
     "@types/jasmine": "^2.2.30",
     "@types/node": "^6.0.42",
+    "@types/vis": "4.18.2",
     "angular-cli": "1.0.0-beta.20-4",
     "codelyzer": "~1.0.0-beta.3",
     "jasmine-core": "2.4.1",

@@ -9,7 +9,7 @@ import {
     VisNetworkData,
     VisEdgeOptions,
     VisNetworkOptions } from 'ng2-vis';
-import { MenubarModule,MenuItem,Menu} from 'primeng/primeng';
+import { MenubarModule, MenuItem, Menu, Dialog} from 'primeng/primeng';
 import { GraphService } from './graph.service';
 import {Node} from './node.model';
 import {Link} from './link.model';
@@ -44,12 +44,18 @@ export class VisNetworkExampleComponent implements OnInit, OnDestroy {
     
     private items: MenuItem[];    
 
+    private displayDialog: boolean = false;
+
     public constructor(private visNetworkService: VisNetworkService, private graphService: GraphService) { }
 
     public addNode(): void {
         let newId = this.visNetworkData.nodes.getLength() + 1;
         this.visNetworkData.nodes.add({ id: newId.toString(), label: 'Node ' + newId });
         this.visNetworkService.fit(this.visNetwork);
+    }
+
+    private showDialog(): void{
+        this.displayDialog = true;
     }
 
     public networkInitialized(): void {
